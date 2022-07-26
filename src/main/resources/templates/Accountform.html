@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th = "https://www.thymeleaf.org/">
+<head>
+<meta charset ="utf-8">
+<title> Account Details </title>
+</head>
+<body>
+<form th:object="${Account}">
+Enter Name: <input type="text" th:field="*{Holder_name}"/>
+Enter phone number: <input type="text" th:field="*{Phone_no}"/>
+Enter user name: <input type="text" th:field="*{User_name}"/>
+Enter password: <input type="text" th:field="*{password}"/>
+<input type ="submit" value = "save"/>
+</form>
+</body>
+</html>
