@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th = "https://www.thymeleaf.org/">
+<head>
+<style>
+h1 {text-align: center;}
+form {text-align: center;}
+div{text-align: center;}
+</style>
+<title>withdarw</title>
+</head>
+<body style="background-color:YellowGreen;">
+<h1>WITHDRAW</h1><br>
+<form th:action="@{/Withdraw}" th:object="${Account}" th:method="post">
+Enter Withdraw Amount: <input type="text" th:field="*{Amount}"/><br></br>
+<input type="submit" value="ok"/>
+</form>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <a href="/Home"><br></br>
+      <button type="button">Back</button>
+      </a>
+    </div>
+   </div>
+</body>
+</html>

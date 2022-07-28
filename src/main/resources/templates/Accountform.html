@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html xmlns:th = "https://www.thymeleaf.org/">
 <head>
+<style>
+h1 {text-align: center;}
+form {text-align: center;}
+</style>
 <meta charset ="utf-8">
-<title> Account Details </title>
+<title> Account form </title>
 </head>
-<body>
-<form th:object="${Account}">
-Enter Name: <input type="text" th:field="*{Holder_name}"/>
-Enter phone number: <input type="text" th:field="*{Phone_no}"/>
-Enter user name: <input type="text" th:field="*{User_name}"/>
-Enter password: <input type="text" th:field="*{password}"/>
+<body style="background-color:PaleTurquoise;">
+<h1>Create Account</h1>
+<form  th:action="@{/Accountform}" th:object="${Account}"  th:method="POST" >
+Enter Name: <input type="text" th:field="*{Holder_name}"/><br></br>
+Enter phone number: <input type="text" th:field="*{Phone_no}"/><br></br>
+Enter user name: <input type="text" th:field="*{userName}"/><br></br>
+Enter password: <input type="text" th:field="*{password}"/><br></br>
 <input type ="submit" value = "save"/>
 </form>
 </body>
 </html>
+
+
+
+
+
+

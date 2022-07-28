@@ -1,5 +1,6 @@
 package com.Accounts.springweb.entities;
 
+//import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,10 +14,12 @@ public class Account {
       @GeneratedValue(strategy=GenerationType.IDENTITY)
 	  private int Acc_ID;
       private String Holder_name;
-      private String User_name;
-      private int Password;
+      //@Column(name="User_name")
+      private String userName;
+      private String Password;
       private int Phone_no;
       private double Acc_balance;
+      private int amount;
 	public int getAcc_ID() {
 		return Acc_ID;
 	}
@@ -29,16 +32,16 @@ public class Account {
 	public void setHolder_name(String holder_name) {
 		Holder_name = holder_name;
 	}
-	public String getUser_name() {
-		return User_name;
+	public String getuserName() {
+		return userName;
 	}
-	public void setUser_name(String user_name) {
-		User_name = user_name;
+	public void setuserName(String user_name) {
+		userName = user_name;
 	}
-	public int getPassword() {
+	public String getPassword() {
 		return Password;
 	}
-	public void setPassword(int password) {
+	public void setPassword(String password) {
 		Password = password;
 	}
 	public int getPhone_no() {
@@ -52,5 +55,11 @@ public class Account {
 	}
 	public void setAcc_balance(double acc_balance) {
 		Acc_balance = acc_balance;
+	}
+	public int getAmount() {
+		return amount;
+	}
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 }

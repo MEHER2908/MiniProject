@@ -6,4 +6,5 @@ import com.Accounts.springweb.entities.Account;
 
 public interface AccountsRepository extends JpaRepository<Account,Integer> {
 			
+	Account findByuserName(String userName);
 }
